@@ -51,13 +51,13 @@ class picar_driver(picarx_improved):
     def k_turning(self, speed,direction = -1):
         self.set_dir_servo_angle(direction * 40)
         picarx_improved.forward(speed, -direction * 40)
-        time.sleep(length * .50)
+        time.sleep(5)
         self.set_dir_servo_angle(-direction * 40)
         self.backward(speed, direction * 40)
-        time.sleep(length * .50)
+        time.sleep(5)
         self.set_dir_servo_angle(direction * 40)
         self.forward(speed, -direction * 40)
-        time.sleep(length * .50)
+        time.sleep(5)
 
     def keyboard_input(self):
         speed =0
