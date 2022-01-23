@@ -227,7 +227,7 @@ class Servo(object):
         # self._debug("High_level_time: %f" % High_level_time)
         pwr = High_level_time / 20000
         # self._debug("pulse width rate: %f" % pwr)
-        value = int(pwr * self.pwm.period())
+        #value = int(pwr * self.pwm.period())
         # self._debug("pulse width value: %d" % value)
         self.pwm.pulse_width(value)
 class I2C(object):
