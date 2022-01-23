@@ -141,7 +141,7 @@ class picarx_improved:
         set_motor_speed(2, -1 * speed)
 
 
-    def forward(speed):
+    def forward(self,speed):
         heading_angle = self.dir_current_angle
         if heading_angle != 0:
             abs_heading_angle = abs(heading_angle)
