@@ -15,7 +15,7 @@ import time
 
 logging_format = "%( asctime)s: %( message)s"
 logging.getLogger ().setLevel(logging.DEBUG)
-class picarx_improved:
+class picarx_improved(Object):
     def __init__(self):
 
 
