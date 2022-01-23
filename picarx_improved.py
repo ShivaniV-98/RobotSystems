@@ -23,26 +23,26 @@ class picarx_improved:
         PRESCALER = 10
         TIMEOUT = 0.02
 
-        dir_servo_pin = Servo(PWM('P2'))
-        camera_servo_pin1 = Servo(PWM('P0'))
-        camera_servo_pin2 = Servo(PWM('P1'))
-        left_rear_pwm_pin = PWM("P13")
-        right_rear_pwm_pin = PWM("P12")
-        left_rear_dir_pin = Pin("D4")
-        right_rear_dir_pin = Pin("D5")
+        self.dir_servo_pin = Servo(PWM('P2'))
+        self.camera_servo_pin1 = Servo(PWM('P0'))
+        self.camera_servo_pin2 = Servo(PWM('P1'))
+        self.left_rear_pwm_pin = PWM("P13")
+        self.right_rear_pwm_pin = PWM("P12")
+        self.left_rear_dir_pin = Pin("D4")
+        self.right_rear_dir_pin = Pin("D5")
 
-        S0 = ADC('A0')
-        S1 = ADC('A1')
-        S2 = ADC('A2')
+        self.S0 = ADC('A0')
+        self.S1 = ADC('A1')
+        self.S2 = ADC('A2')
 
-        Servo_dir_flag = 1
-        dir_cal_value = 0
-        cam_cal_value_1 = 0
-        cam_cal_value_2 = 0
-        motor_direction_pins = [left_rear_dir_pin, right_rear_dir_pin]
-        motor_speed_pins = [left_rear_pwm_pin, right_rear_pwm_pin]
-        cali_dir_value = [-1, 1]
-        cali_speed_value = [0, 0]
+        self.Servo_dir_flag = 1
+        self.dir_cal_value = 0
+        self.cam_cal_value_1 = 0
+        self.cam_cal_value_2 = 0
+        self.motor_direction_pins = [left_rear_dir_pin, right_rear_dir_pin]
+        self.motor_speed_pins = [left_rear_pwm_pin, right_rear_pwm_pin]
+        self.cali_dir_value = [-1, 1]
+        self.cali_speed_value = [0, 0]
         # 初始化PWM引脚
         for pin in motor_speed_pins:
             pin.period(PERIOD)
