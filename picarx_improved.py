@@ -36,6 +36,7 @@ class picarx_improved:
         self.S2 = ADC('A2')
 
         self.Servo_dir_flag = 1
+        self.dir_current_angle=0
         self.dir_cal_value = 0
         self.cam_cal_value_1 = 0
         self.cam_cal_value_2 = 0
