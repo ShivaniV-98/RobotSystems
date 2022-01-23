@@ -94,7 +94,7 @@ class picarx_improved:
         dir_servo_pin.angle(dir_cal_value)
 
 
-    def set_dir_servo_angle(value):
+    def set_dir_servo_angle(self,value):
         global dir_cal_value
         value = round(value)
         # print("set_dir_servo_angle:%s"%value)
