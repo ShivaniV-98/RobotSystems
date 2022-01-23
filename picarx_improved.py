@@ -44,7 +44,7 @@ class picarx_improved:
         self.cali_dir_value = [-1, 1]
         self.cali_speed_value = [0, 0]
         # 初始化PWM引脚
-        for pin in motor_speed_pins:
+        for pin in self.motor_speed_pins:
             pin.period(self.PERIOD)
             pin.prescaler(self.PRESCALER)
 
