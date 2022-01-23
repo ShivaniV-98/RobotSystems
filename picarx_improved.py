@@ -19,9 +19,9 @@ class picarx_improved:
     def __init__(self):
 
 
-        PERIOD = 4095
-        PRESCALER = 10
-        TIMEOUT = 0.02
+        self.PERIOD = 4095
+        self.PRESCALER = 10
+        self.TIMEOUT = 0.02
 
         self.dir_servo_pin = Servo(PWM('P2'))
         self.camera_servo_pin1 = Servo(PWM('P0'))
