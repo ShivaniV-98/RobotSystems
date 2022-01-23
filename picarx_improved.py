@@ -143,7 +143,7 @@ class picarx_improved(object):
 
 
     def forward(self,speed):
-        heading_angle = self.dir_current_angle
+        heading_angle = 0
         if heading_angle != 0:
             abs_heading_angle = abs(heading_angle)
             if abs_heading_angle > 45:
