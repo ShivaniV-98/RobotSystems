@@ -98,29 +98,29 @@ class picarx_improved:
         global dir_cal_value
         value = round(value)
         # print("set_dir_servo_angle:%s"%value)
-        dir_servo_pin.angle(value + dir_cal_value)
+        self.dir_servo_pin.angle(value + dir_cal_value)
 
 
     def camera_servo1_angle_calibration(value):
         global cam_cal_value_1
         cam_cal_value_1 = value
-        camera_servo_pin1.angle(cam_cal_value_1)
+        self.camera_servo_pin1.angle(cam_cal_value_1)
 
 
     def camera_servo2_angle_calibration(value):
         global cam_cal_value_2
         cam_cal_value_2 = value
-        camera_servo_pin2.angle(cam_cal_value_2)
+        self.camera_servo_pin2.angle(cam_cal_value_2)
 
 
     def set_camera_servo1_angle(value):
         global cam_cal_value_1
-        camera_servo_pin1.angle(value + cam_cal_value_1)
+        self.camera_servo_pin1.angle(value + cam_cal_value_1)
 
 
     def set_camera_servo2_angle(value):
         global cam_cal_value_2
-        camera_servo_pin2.angle(value + cam_cal_value_2)
+        self.camera_servo_pin2.angle(value + cam_cal_value_2)
 
 
     def get_adc_value():
