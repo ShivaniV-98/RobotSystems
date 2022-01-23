@@ -45,8 +45,8 @@ class picarx_improved:
         self.cali_speed_value = [0, 0]
         # 初始化PWM引脚
         for pin in motor_speed_pins:
-            pin.period(PERIOD)
-            pin.prescaler(PRESCALER)
+            pin.period(self.PERIOD)
+            pin.prescaler(self.PRESCALER)
 
 
     def set_motor_speed(motor, speed):
