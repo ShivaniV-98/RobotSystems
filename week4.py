@@ -3,7 +3,7 @@
 import time
 import concurrent.futures
 from threading import Lock
-from picarx_classes import Motors, Sensors, Interpreters, Controllers
+from control import Motors, Sensors, Interpreters, Controllers
 
 try :
     from ezblock import __reset_mcu__
