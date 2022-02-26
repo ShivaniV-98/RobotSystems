@@ -65,10 +65,7 @@ def initMove():
 
 class Perception:
     def __init__(self, img):
-        self._img = img
-        self._imgCopy = img.copy()
-        self._imgH, self._imgW = img.shape[:2]
-
+        
         self._maxArea = 0
         self._maxAreaContour = 0
         self.roi = ()
@@ -341,21 +338,21 @@ if __name__ == '__main__':
         if img is not None:
             frame = img.copy()
             p_frame, Frame = p.preprocess(frame)
-            if not s.start_pick_up:
+            if not p.start_pick_up:
                 areaMaxContour_max, max_area, color_area_max = p.biggest_area(p_frame)
             if max_area > 2500:  # Found the largest area
                 if not p.start_pick_up:
-                    world_x, world_y = s.draw_outline_color(Frame, areaMaxContour_max, max_area, color_area_max)
+                    world_x, world_y = p.draw_contour(Frame, areaMaxContour_max, max_area, color_area_max)
                 if not p.start_pick_up:
                     p.position_confidence(world_x, world_y)
                 if not p.start_pick_up:
                     p.set_color(color_area_max)
 
             # Draw text for seen object
-            cv2.putText(Frame, "Color: " + s.detect_color, (10, Frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.65,
-                        s.draw_color, 2)
+            cv2.putText(Frame, "Color: " + p.detect_color, (10, Frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.65,
+                        p.draw_color, 2)
             cv2.imshow('Frame', Frame)
-            set_rgb(s.detect_color)
+            set_rgb(p.detect_color)
             key = cv2.waitKey(1)
             if key == 27:
                 break
